@@ -1,0 +1,67 @@
+figure {
+    @include Image($figPath, no-repeat);
+    background-position: 0 50px;
+    @include navBase(400px);
+    display:block;
+    
+    @include mediaQuery(959px) {
+        @include medianav(140px);
+         background-position:center;
+    }
+    @include mediaQuery(459px) {
+        background-size:contain;
+        height:100px;
+      }
+    
+}
+
+nav{
+    @include navBase(540px);
+    text-align:right;
+    @include mediaQuery(959px) {
+        @include medianav(50px);
+        text-align:center;
+    }
+    @include mediaQuery(459px) {
+        margin-bottom:40px !important;
+      }
+    
+    
+    ul{
+        list-style-type:none;
+        margin-top:95px;
+        @include mediaQuery(959px) {
+            margin-top:0;
+        }
+
+       
+
+    }
+    ul li {
+        display:inline;
+        font-size:0.8em;
+        margin-right:10px;
+        @include mediaQuery(959px) {
+            font-size:1em;
+            margin:0 10px;
+        }
+        @include mediaQuery(767px) {
+            font-size:0.8em;
+            margin:0 5px;
+        
+          }
+
+      
+
+    }
+    ul li a { 
+        color: $red;
+        letter-spacing:-0.01em;
+        text-decoration: none;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+}

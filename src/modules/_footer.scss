@@ -1,0 +1,42 @@
+.greybar {
+    @include foo($light-white, 90px);
+    clear:both; 
+    @include mediaQuery(459px) {
+        display:none;
+      }
+    
+}
+footer {
+    @include foo($dark-color, 120px, 50px);
+    text-align: center;
+    color: $white;
+    @include mediaQuery(459px) {
+        text-align:center;
+      }
+}
+.social-media {
+    margin:0 auto; 
+    width:165px;
+    div {
+        float:left; 
+        margin-right:5px;
+    }
+    a {
+        display:block;
+        text-indent:-9999px;
+        @include generalbox(36px, 36px);
+    }
+    div.one{
+        @include fooImage($fooImagePath, 0 0);
+    }
+    div.two {
+        @include fooImage($fooImagePath, -38px 0);
+
+    }
+    div.three {
+        @include fooImage($fooImagePath, -76px 0);
+    }
+    div.four {
+        @include fooImage($fooImagePath, -114px 0);
+    }
+}
